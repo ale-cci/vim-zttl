@@ -1,0 +1,47 @@
+# Example title
+### Markdown table
+
+| Title 1 | Title 2      |
+|---------|--------------|
+| content | more content |
+| content | more content |
+| content | more content |
+| content | more content |
+
+
+### Formatted text
+Example for `preformatted` text in line
+
+```
+  and an example
+  for multiple
+  lines
+```
+
+### Lists
+
+* unordered item
+* another unordered item
+  - should work with - char too
+  + and with plus
+
+1. Ordered list with numbers
+2. Second item
+3. Third
+
+
+### Quotes
+> Lorem ipsum dolor sit amet.
+> Lorem ipsum dolor sit amet.
+> Lorem ipsum dolor sit amet with `pre` too
+
+
+### Links
+External [links](./file) are highlighted, and reference is
+shown when cursor line is on [top](./hidden/reference).
+
+
+
+### Tags
+[example tag]: tag content
+[data]: hidden when hovered
