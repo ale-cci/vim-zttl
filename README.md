@@ -1,2 +1,7 @@
-# ZTT
-Custom vim conceals for custom .ztt files. Retro-compatible with markdown.
+# My Zettel Plugin
+Vim conceals and shortcuts for taking notes with markdown syntax in `.ztt` files
+
+Use plugin on an opened markdown file
+```
+set ft=zettel
+```
