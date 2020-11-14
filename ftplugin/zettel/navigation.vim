@@ -2,6 +2,7 @@ nnoremap <script> <buffer> <silent> [[ <nop>
 nnoremap <script> <buffer> <silent> ]] <nop>
 nnoremap <script> <buffer> <silent> [] <nop>
 nnoremap <script> <buffer> <silent> ][ <nop>
+nnoremap <script> <buffer> <silent> <C-]> <C-w>gf<C-w>T
 
 function! s:NextSection(type, backwards)
     if a:backwards
