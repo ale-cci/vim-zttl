@@ -22,7 +22,7 @@ syn match headerHash '^#\{1,6\}' conceal cchar=▷ contained
 
 
 " Markdown quote >
-syn match zettelQuoteStart '\s*> ' skipwhite contains=zettelQuoteArrow nextgroup=zettelQuote
+syn match zettelQuoteStart '^\s*> ' skipwhite contains=zettelQuoteArrow nextgroup=zettelQuote
 syn match zettelQuoteArrow ">" containedin=startQuote contained conceal cchar=│
 syn match zettelQuote '.*' contained contains=zettelPre,zettelLinkRef
 
@@ -34,7 +34,7 @@ syn match zettelDot '\*' containedin=zettelDotStart contained conceal cchar=∘
 syn match zettelDot '-' contained containedin=zettelDotStart
 syn match zettelDot '+' contained containedin=zettelDotStart
 
-syn match zettelList '.*' contained
+syn match zettelList '.*' contained contains=zettelPre
 
 " Numbered lists
 syn match zettelNumberedListStart '^\s*\d\+\.' skipwhite contains=zettelNumberedListHeader nextgroup=zettelList
@@ -65,13 +65,13 @@ syn match zettelEmptyCheckbox '^\s*-\s\[\s\]\s' contains=zettelCheckBox
 syn region zettelPre start='```' end='```'
 syn region zettelPre start='`' end='`'
 
-syn match zettelBold '__[a-zA-Z\s'"`*_]\+__'  contains=zettelBoldMark keepend
-syn match zettelBold '\*\*[a-zA-Z\s'"`*_]\+\*\*' contains=zettelBoldMark keepend
+syn match zettelBold '__[0-9a-zA-Z\s'"`*_]\+__'  contains=zettelBoldMark keepend
+syn match zettelBold '\*\*[0-9a-zA-Z\s'"`*_]\+\*\*' contains=zettelBoldMark keepend
 syn match zettelBoldMark '__' contained containedin=zettelBold cchar= conceal
 syn match zettelBoldMark '\*\*' contained containedin=zettelBold cchar= conceal
 
-syn match zettelCoursive '_[a-zA-Z\s'"`]\+_'  contains=zettelCoursiveMark keepend
-syn match zettelCoursive '\*[a-zA-Z\s'"`]\+\*' contains=zettelCoursiveMark keepend
+syn match zettelCoursive '_[0-9a-zA-Z\s'"`]\+_'  contains=zettelCoursiveMark keepend
+syn match zettelCoursive '\*[0-9a-zA-Z\s'"`]\+\*' contains=zettelCoursiveMark keepend
 syn match zettelCoursiveMark '_' contained containedin=zettelCoursive conceal cchar="
 syn match zettelCoursiveMark '\*' contained containedin=zettelCoursive conceal cchar="
 
